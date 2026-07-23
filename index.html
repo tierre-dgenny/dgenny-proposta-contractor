@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial — Contractor</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Quicksand',Arial,sans-serif;background:#121325;color:#fff;line-height:1.6}
+h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif}
+
+.hero{background:linear-gradient(135deg,#121325 0%,#1a1840 50%,#121325 100%);padding:80px 40px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(102,96,180,0.18) 0%,transparent 60%);pointer-events:none}
+.logo-svg{margin-bottom:36px;display:inline-block}
+.badge{display:inline-block;background:rgba(102,96,180,0.2);border:1px solid rgba(102,96,180,0.5);color:#FFBEF5;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:24px}
+.hero h1{font-size:clamp(34px,5vw,60px);font-weight:800;line-height:1.1;margin-bottom:16px;color:#fff}
+.hero h1 em{font-style:normal;color:#FFBEF5}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.65);margin-bottom:48px;font-weight:500}
+.hero-metrics{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:48px}
+.hm{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;text-align:center;min-width:150px}
+.hm-val{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:800;color:#FFBEF5;line-height:1;margin-bottom:8px}
+.hm-lbl{font-size:12px;color:rgba(255,255,255,0.55);font-weight:500}
+
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(102,96,180,0.4),transparent)}
+
+.section{padding:72px 40px;max-width:1080px;margin:0 auto}
+.sec-badge{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6660B4;margin-bottom:14px}
+.sec-title{font-size:clamp(26px,3vw,40px);font-weight:800;margin-bottom:12px;color:#fff}
+.sec-title em{font-style:normal;color:#FFBEF5}
+.sec-desc{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:44px;max-width:580px}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-bottom:40px}
+.mc{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px 22px;text-align:center;transition:.3s}
+.mc:hover{background:rgba(102,96,180,0.1);border-color:rgba(102,96,180,0.3);transform:translateY(-4px)}
+.mc-val{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:800;color:#FFBEF5;margin-bottom:8px}
+.mc-lbl{font-size:13px;color:rgba(255,255,255,0.55);font-weight:500}
+
+.challenges{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.ci{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-left:3px solid #6660B4;border-radius:12px;padding:22px}
+.ci-title{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:8px}
+.ci-desc{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.55}
+
+.plan-card{background:linear-gradient(135deg,rgba(102,96,180,0.18) 0%,rgba(18,19,37,0.7) 100%);border:1px solid rgba(102,96,180,0.4);border-radius:24px;padding:44px}
+.plan-title{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:#FFBEF5;margin-bottom:30px}
+.plan-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pf{display:flex;align-items:flex-start;gap:14px}
+.pf-icon{width:40px;height:40px;background:rgba(102,96,180,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px}
+.pf-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:4px}
+.pf-text span{font-size:12px;color:rgba(255,255,255,0.55)}
+
+.roi-section{background:#0d0e1f;padding:80px 0}
+.roi-inner{max-width:1080px;margin:0 auto;padding:0 40px}
+.roi-table{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:44px}
+.rc{border-radius:20px;padding:34px 26px;text-align:center;position:relative;overflow:hidden}
+.rc.cons{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)}
+.rc.real{background:rgba(102,96,180,0.12);border:1px solid rgba(102,96,180,0.4)}
+.rc.proj{background:linear-gradient(135deg,rgba(255,190,245,0.1) 0%,rgba(102,96,180,0.18) 100%);border:1px solid rgba(255,190,245,0.4)}
+.rc.proj::after{content:'PROJETADO';position:absolute;top:18px;right:-30px;background:#FFBEF5;color:#121325;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:800;letter-spacing:2px;padding:5px 42px;transform:rotate(45deg)}
+.rc-scenario{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:6px}
+.rc-conv{font-size:13px;font-weight:600;color:rgba(255,255,255,0.65);margin-bottom:22px}
+.rc-roi{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:800;line-height:1;margin-bottom:4px}
+.rc.cons .rc-roi{color:rgba(255,255,255,0.8)}
+.rc.real .rc-roi{color:#6660B4}
+.rc.proj .rc-roi{color:#FFBEF5}
+.rc-lbl{font-size:11px;color:rgba(255,255,255,0.45);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:28px}
+.rc-rows{text-align:left;border-top:1px solid rgba(255,255,255,0.08);padding-top:22px}
+.rc-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.rc-row:last-child{border-bottom:none}
+.rc-rl{color:rgba(255,255,255,0.5)}
+.rc-rv{font-family:'Montserrat',sans-serif;font-weight:700;color:#fff}
+.roi-note{text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,0.35)}
+
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.prod-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:30px 22px;text-align:center}
+.prod-num{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:800;color:#FFBEF5;line-height:1;margin-bottom:10px}
+.prod-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:7px}
+.prod-desc{font-size:12px;color:rgba(255,255,255,0.5)}
+
+.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.pc{border-radius:20px;padding:38px;max-width:480px;margin:0 auto}
+.plans-grid .pc{max-width:none;margin:0}
+.pc.anual{background:linear-gradient(135deg,rgba(102,96,180,0.18) 0%,rgba(18,19,37,0.6) 100%);border:2px solid #6660B4}
+.pc.semestral{background:linear-gradient(135deg,rgba(102,96,180,0.12) 0%,rgba(18,19,37,0.6) 100%);border:2px solid rgba(102,96,180,0.5)}
+.ptag{display:inline-block;background:#6660B4;color:#fff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px}
+.pname{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+.pprice{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:#FFBEF5;line-height:1;margin-bottom:4px}
+.pperiod{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:22px}
+.pitems{list-style:none;margin-bottom:20px}
+.pitems li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:10px}
+.pitems li::before{content:'✓';color:#6660B4;font-weight:700;flex-shrink:0}
+.ptotal{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.45);margin-top:14px}
+.ptotal strong{color:#FFBEF5}
+.pvalid{margin-top:16px;font-size:12px;color:rgba(255,255,255,0.3);text-align:center}
+
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;position:relative}
+.timeline::before{content:'';position:absolute;top:27px;left:0;right:0;height:2px;background:linear-gradient(90deg,#6660B4,#FFBEF5);z-index:0}
+.ts{text-align:center;padding:0 14px;position:relative}
+.ts-dot{width:54px;height:54px;border-radius:50%;background:#6660B4;border:3px solid #121325;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;color:#fff}
+.ts-title{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:#fff;margin-bottom:7px}
+.ts-desc{font-size:11px;color:rgba(255,255,255,0.5)}
+
+.cta-section{background:linear-gradient(135deg,#6660B4 0%,#4f4a9e 100%);padding:80px 40px;text-align:center}
+.cta-section h2{font-size:clamp(26px,3vw,40px);font-weight:800;color:#fff;margin-bottom:14px}
+.cta-section p{font-size:17px;color:rgba(255,255,255,0.8);margin-bottom:38px;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;background:#FFBEF5;color:#121325;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;padding:18px 46px;border-radius:100px;text-decoration:none;letter-spacing:0.5px}
+
+.footer{background:#0a0b18;padding:36px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-logo{margin-bottom:10px;display:inline-block}
+.footer-text{font-size:12px;color:rgba(255,255,255,0.35)}
+
+@media(max-width:768px){
+  .hero{padding:56px 20px 40px}
+  .section{padding:56px 20px}
+  .roi-table{grid-template-columns:1fr}
+  .timeline::before{display:none}
+  .plan-card{padding:28px 20px}
+  .cta-section{padding:56px 20px}
+  .roi-inner{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="logo-svg">
+    <svg width="160" viewBox="0 0 752 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M262.485 68.3907C255.412 60.7099 246.08 56.8236 234.697 56.8236C221.49 56.8236 210.989 60.8016 203.503 68.6543C196.029 76.4841 192.246 86.8475 192.246 99.4462C192.246 112.045 196.041 122.454 203.526 129.997C211.012 137.541 221.089 141.37 233.481 141.37H235.786C246.906 141.049 255.985 137.013 262.829 129.367V139.627H277.319V25H262.473V68.3907H262.485ZM235.912 128.782C227.429 128.782 220.527 126.065 215.38 120.7C210.221 115.324 207.608 108.17 207.608 99.4348C207.608 90.1261 210.221 82.709 215.38 77.3898C220.527 72.082 227.429 69.388 235.912 69.388C244.395 69.388 251.021 72.1164 255.698 77.5044C260.433 82.9497 262.829 90.2064 262.829 99.0794C262.829 107.952 260.421 114.796 255.687 120.414C250.941 126.042 244.475 128.771 235.912 128.771V128.782Z" fill="white"/>
+      <path d="M358.437 68.6656C351.341 60.8014 341.895 56.812 330.305 56.812C317.099 56.812 306.598 60.79 299.112 68.6427C291.637 76.4725 287.854 86.8358 287.854 99.4346C287.854 112.033 291.649 122.443 299.135 129.986C306.621 137.529 316.697 141.358 329.09 141.358H331.394C342.227 141.037 351.181 137.082 358.093 129.596V154.541C358.093 156.742 357.612 157.384 357.463 157.533C357.279 157.717 356.626 158.164 354.643 158.164H320.366V171.439H354.643C361.2 171.439 365.763 170.247 368.606 167.793C371.506 165.283 372.927 160.95 372.927 154.553V58.5545H358.437V68.6656ZM331.52 128.782C323.037 128.782 316.136 126.065 310.988 120.7C305.83 115.323 303.216 108.17 303.216 99.4346C303.216 90.1259 305.83 82.7088 310.988 77.3896C316.136 72.0819 323.037 69.3879 331.52 69.3879C340.003 69.3879 346.629 72.1162 351.307 77.5043C356.041 82.9496 358.437 90.2062 358.437 99.0792C358.437 107.952 356.03 114.796 351.295 120.413C346.549 126.042 340.084 128.771 331.52 128.771V128.782Z" fill="white"/>
+      <path d="M457.106 72.506C454.137 67.8517 449.838 64.0228 444.313 61.1453C438.799 58.2679 432.264 56.812 424.882 56.812C412.008 56.812 401.782 60.79 394.457 68.6542C387.166 76.484 383.474 86.7785 383.474 99.2626C383.474 111.747 387.234 122.443 394.663 129.986C402.091 137.54 412.26 141.358 424.882 141.358C431.164 141.358 436.838 140.383 441.745 138.48C446.651 136.566 450.434 134.365 452.991 131.923C455.513 129.516 457.68 126.719 459.422 123.589C461.211 120.391 462.185 118.293 462.517 116.986C462.815 115.793 463.022 114.831 463.148 114.097L463.434 112.435H448.004L447.19 115.152C446.881 116.069 446.216 117.295 445.184 118.797C444.141 120.333 442.822 121.904 441.275 123.463C439.807 124.93 437.641 126.191 434.844 127.223C432.001 128.266 428.722 128.782 425.076 128.782C416.719 128.782 410.277 126.443 405.943 121.835C401.851 117.49 399.443 111.724 398.79 104.674H464.214L464.375 103.435C464.615 101.636 464.73 99.8817 464.73 98.208C464.73 94.6312 464.191 90.573 463.125 86.1365C462.047 81.6656 460.03 77.0686 457.118 72.4946L457.106 72.506ZM449.529 91.9258H398.824C399.627 85.976 402.114 80.7715 406.264 76.4267C410.712 71.7609 417.04 69.3879 425.054 69.3879C433.067 69.3879 438.913 71.715 443.132 76.312C447.293 80.8517 449.449 86.1021 449.54 91.9258H449.529Z" fill="white"/>
+      <path d="M515.446 56.812H514.724C508.338 56.9381 502.595 58.6233 497.631 61.8217C494.353 63.9425 491.659 66.476 489.572 69.3879V58.5545H475.254V139.627H490.099V98.3914C490.099 88.5095 492.358 81.2185 496.817 76.7018C501.265 72.1965 507.364 69.9152 514.93 69.9152C522.496 69.9152 527.701 71.8526 530.876 75.6586C534.121 79.5448 535.76 86.148 535.76 95.2617V139.627H550.778V95.2617C550.778 82.4452 547.912 72.7353 542.248 66.4072C536.54 60.0334 527.529 56.812 515.457 56.812H515.446Z" fill="white"/>
+      <path d="M604.451 56.812H603.729C597.344 56.9381 591.6 58.6233 586.648 61.8217C583.369 63.9425 580.675 66.476 578.589 69.3879V58.5545H564.27V139.627H579.105V98.3914C579.105 88.5095 581.363 81.2185 585.822 76.7018C590.27 72.1965 596.369 69.9152 603.935 69.9152C611.501 69.9152 616.706 71.8526 619.882 75.6586C623.126 79.5448 624.765 86.148 624.765 95.2617V139.783H639.783V95.2617C639.783 82.4452 636.917 72.7353 631.254 66.4072C625.545 60.0334 616.534 56.812 604.463 56.812H604.451Z" fill="white"/>
+      <path d="M707.454 58.5547L682.543 119.428L659.146 59.4603L658.79 58.5547H642.821L675.401 136.99L668.546 153.567C667.606 155.436 667.044 156.525 666.849 156.88C666.849 156.88 666.666 157.167 665.76 157.648C665.302 157.889 664.407 158.175 662.688 158.175H639.772V171.451H662.688C666.047 171.451 668.867 171.141 671.068 170.534C673.441 169.869 675.504 168.447 677.19 166.303C678.76 164.309 679.826 162.761 680.457 161.569C681.053 160.434 682.085 158.221 683.644 154.759L723.572 58.5662H707.454V58.5547Z" fill="white"/>
+      <path d="M721.887 128.392C721.887 126.306 720.603 125.24 718.058 125.24H714.114V135.27H715.479V131.476H719.193C720.087 131.476 720.19 131.946 720.19 132.301V135.27H721.554V132.301C721.554 131.591 721.234 131.098 720.592 130.845C721.463 130.318 721.898 129.493 721.898 128.392H721.887ZM720.523 128.392C720.523 129.665 719.72 130.284 718.058 130.284H715.479V126.432H718.058C719.72 126.432 720.523 127.074 720.523 128.392Z" fill="white"/>
+      <path d="M724.26 123.749C722.449 121.915 720.213 120.987 717.611 120.987C715.009 120.987 712.762 121.915 710.928 123.749C709.093 125.584 708.165 127.819 708.165 130.421C708.165 133.024 709.093 135.213 710.928 137.036C712.762 138.87 715.009 139.799 717.611 139.799C720.213 139.799 722.449 138.87 724.26 137.036C726.071 135.202 727 132.978 727 130.421C727 127.865 726.083 125.584 724.26 123.749ZM725.624 130.433C725.624 132.645 724.833 134.571 723.286 136.142C721.738 137.712 719.823 138.503 717.611 138.503C715.398 138.503 713.473 137.701 711.925 136.107C710.377 134.56 709.586 132.645 709.586 130.433C709.586 128.22 710.377 126.283 711.925 124.69C713.473 123.108 715.387 122.294 717.611 122.294C719.835 122.294 721.738 123.085 723.286 124.655C724.833 126.226 725.624 128.163 725.624 130.421V130.433Z" fill="white"/>
+      <path d="M152.81 80.9664L107.173 93.1984C102.003 94.5855 97.291 97.3024 93.5079 101.085C89.7248 104.869 87.0079 109.58 85.6208 114.75L73.3889 160.388L89.1631 164.618L101.063 120.207L135.729 154.874L147.285 143.318L112.618 108.652L157.029 96.7521L152.799 80.9779L152.81 80.9664Z" fill="#FFBEF5"/>
+      <path d="M108.652 36.051L96.4198 81.6885C95.0326 86.8587 92.3157 91.5704 88.5326 95.3534C84.7496 99.1365 80.0379 101.853 74.8677 103.241L29.2302 115.472L25 99.6982L69.4109 87.7988L34.7557 53.1206L46.3113 41.5651L80.978 76.2317L92.866 31.8208L108.64 36.051H108.652Z" fill="#FFBEF5"/>
+    </svg>
+  </div>
+  <div><div class="badge">Proposta Comercial</div></div>
+  <h1>Cotação que corre<br><em>na velocidade da obra</em></h1>
+  <p class="hero-sub">Proposta para <strong>Contractor</strong> · Planos para 2 ou 3 Assistentes de IA</p>
+  <div class="hero-metrics">
+    <div class="hm"><div class="hm-val">R$ 1M</div><div class="hm-lbl">Volume de compras/mês</div></div>
+    <div class="hm"><div class="hm-val">R$ 895K</div><div class="hm-lbl">Ganho Líquido Real.</div></div>
+    <div class="hm"><div class="hm-val">24 dias</div><div class="hm-lbl">Payback estimado</div></div>
+    <div class="hm"><div class="hm-val">Sienge</div><div class="hm-lbl">ERP já integrado</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SITUAÇÃO ATUAL -->
+<section class="section">
+  <div class="sec-badge">Situação Atual</div>
+  <h2 class="sec-title">O cenário de compras da<br><em>Contractor</em> hoje</h2>
+  <p class="sec-desc">Hoje o processo de cotação da Contractor roda 100% manual dentro do Sienge: solicitações são impressas ou salvas em PDF e enviadas fornecedor a fornecedor pelo WhatsApp do comprador, e cada resposta volta por lá — exigindo digitação manual de cada proposta de volta no mapa de cotação.</p>
+  <div class="metrics-grid">
+    <div class="mc"><div class="mc-val">3</div><div class="mc-lbl">Compradores no time</div></div>
+    <div class="mc"><div class="mc-val">100%</div><div class="mc-lbl">Cotações preenchidas manualmente</div></div>
+    <div class="mc"><div class="mc-val">~50</div><div class="mc-lbl">Itens no maior mapa de cotação já feito</div></div>
+    <div class="mc"><div class="mc-val">5+</div><div class="mc-lbl">Municípios com obras ativas no ES</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DESAFIOS -->
+<section class="section">
+  <div class="sec-badge">Diagnóstico</div>
+  <h2 class="sec-title">Desafios <em>identificados</em></h2>
+  <p class="sec-desc">O que está travando a eficiência de compras da Contractor hoje.</p>
+  <div class="challenges">
+    <div class="ci"><div class="ci-title">Retrabalho na coleta de propostas</div><div class="ci-desc">Fornecedores respondem por fora do Sienge porque não gostam de preencher no sistema deles — cada resposta é digitada manualmente pelo comprador no mapa de cotação.</div></div>
+    <div class="ci"><div class="ci-title">Descoberta de fornecedor lenta em urgências</div><div class="ci-desc">No caso do sinalizador viário, o fornecedor habitual pediu 5 dias de prazo. A busca por alternativa foi manual, no Google, sob pressão do prazo do Ministério do Trabalho.</div></div>
+    <div class="ci"><div class="ci-title">Dependência dos mesmos fornecedores</div><div class="ci-desc">Existem fornecedores cadastrados que vendem itens que o time nem sabia — sem um jeito rápido de descobrir novos parceiros por proximidade da obra.</div></div>
+    <div class="ci"><div class="ci-title">Sem busca por proximidade geográfica</div><div class="ci-desc">Obras em Guriri, São Mateus, Domingos Martins e Viana precisam de fornecedores locais, mas hoje a triagem geográfica é feita cidade por cidade, manualmente.</div></div>
+    <div class="ci"><div class="ci-title">Pressão de preço em licitação</div><div class="ci-desc">Preços de licitação são fechados meses antes da obra começar; sem agilidade para recotar, a margem já fechada corre risco de ficar defasada pelos reajustes mensais.</div></div>
+    <div class="ci"><div class="ci-title">Tempo do comprador consumido no operacional</div><div class="ci-desc">Entre print, envio, cobrança e digitação manual, sobra pouco tempo para negociação estratégica e homologação de novos fornecedores.</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOLUÇÃO -->
+<section class="section">
+  <div class="sec-badge">Solução Proposta</div>
+  <h2 class="sec-title">2 ou 3 Assistentes de IA <em>dgenny®</em></h2>
+  <p class="sec-desc">Configurados especificamente para a operação de compras da Contractor — um assistente por comprador (Nataly, colega de suprimentos e o comprador de peças de São Diogo com o Irineu).</p>
+  <div class="plan-card">
+    <div class="plan-title">O que vem em qualquer plano · Contractor</div>
+    <div class="plan-features">
+      <div class="pf"><div class="pf-icon">🤖</div><div class="pf-text"><strong>Cotação automática via WhatsApp</strong><span>1 assistente por comprador, disparando e negociando cotações direto com fornecedores no WhatsApp</span></div></div>
+      <div class="pf"><div class="pf-icon">🔍</div><div class="pf-text"><strong>Descoberta de novos fornecedores</strong><span>Busca sem limite geográfico — inclusive por cidade próxima à obra (Guriri, São Mateus, Domingos Martins etc.)</span></div></div>
+      <div class="pf"><div class="pf-icon">⚖️</div><div class="pf-text"><strong>Equalização automática de propostas</strong><span>Corrige item trocado, unidade errada ou proposta incompleta antes de chegar ao comprador</span></div></div>
+      <div class="pf"><div class="pf-icon">🔄</div><div class="pf-text"><strong>Follow-up automático</strong><span>Cobra fornecedor sem resposta após 2h, sem intervenção manual</span></div></div>
+      <div class="pf"><div class="pf-icon">🔗</div><div class="pf-text"><strong>Integração nativa com Sienge</strong><span>Puxa a solicitação de compra direto via API pública — sem alterar a estrutura de insumos</span></div></div>
+      <div class="pf"><div class="pf-icon">📊</div><div class="pf-text"><strong>Mapa de cotação pronto</strong><span>Exporta em PDF/Excel, pronto para lançar de volta no Sienge, sem preenchimento manual</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="roi-section">
+  <div class="roi-inner">
+    <div class="sec-badge">Projeção de Ganho</div>
+    <h2 class="sec-title">Projeção de Ganho em <em>12 Meses</em></h2>
+    <p class="sec-desc" style="margin-bottom:0">Base de cálculo: R$ 1M/mês em compras. Ganho sobre nova base de fornecedores e maior competição nas cotações.</p>
+    <div class="roi-table">
+      <div class="rc cons">
+        <div class="rc-scenario">Conservador</div>
+        <div class="rc-conv">5% de saving</div>
+        <div class="rc-roi">R$ 535.000</div>
+        <div class="rc-lbl">Ganho Líquido</div>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="rc-rl">Saving/mês</span><span class="rc-rv">R$ 50.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Saving no período</span><span class="rc-rv">R$ 600.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento total</span><span class="rc-rv">R$ 65.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">39 dias</span></div>
+        </div>
+      </div>
+      <div class="rc real">
+        <div class="rc-scenario">Realista</div>
+        <div class="rc-conv">8% de saving</div>
+        <div class="rc-roi">R$ 895.000</div>
+        <div class="rc-lbl">Ganho Líquido</div>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="rc-rl">Saving/mês</span><span class="rc-rv">R$ 80.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Saving no período</span><span class="rc-rv">R$ 960.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento total</span><span class="rc-rv">R$ 65.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">24 dias</span></div>
+        </div>
+      </div>
+      <div class="rc proj">
+        <div class="rc-scenario">Projetado</div>
+        <div class="rc-conv">12% de saving</div>
+        <div class="rc-roi">R$ 1.375.000</div>
+        <div class="rc-lbl">Ganho Líquido</div>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="rc-rl">Saving/mês</span><span class="rc-rv">R$ 120.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Saving no período</span><span class="rc-rv">R$ 1.440.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Investimento total</span><span class="rc-rv">R$ 65.000</span></div>
+          <div class="rc-row"><span class="rc-rl">Payback</span><span class="rc-rv">16 dias</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="roi-note">* Retorno previsível, não garantido. Saving aplicado sobre o volume de compras de R$ 1M/mês. Investimento total = R$ 65.000 (12 meses de mensalidade + implantação). Plano sem fidelidade — projeção de 12 meses é ilustrativa. Ganhos de produtividade não contabilizados.</p>
+  </div>
+</section>
+
+<!-- IMPACTO OPERACIONAL -->
+<section class="section">
+  <div class="sec-badge">Impacto Operacional</div>
+  <h2 class="sec-title">O que muda na<br><em>operação do time</em></h2>
+  <p class="sec-desc">Além do saving financeiro, a dgenny® multiplica a capacidade de compras sem aumentar a equipe.</p>
+  <div class="prod-grid">
+    <div class="prod-card"><div class="prod-num">24x7</div><div class="prod-title">Cotação nunca para</div><div class="prod-desc">Fornecedor respondeu sábado à noite? A assistente já está negociando, sem esperar o próximo dia útil</div></div>
+    <div class="prod-card"><div class="prod-num">5×</div><div class="prod-title">Produtividade do time</div><div class="prod-desc">O time de compras opera muito mais negociações sem aumentar headcount ou carga operacional</div></div>
+    <div class="prod-card"><div class="prod-num">80%</div><div class="prod-title">Operacional automatizado</div><div class="prod-desc">O time foca em análise e decisão estratégica — fim do WhatsApp caótico e da digitação manual</div></div>
+    <div class="prod-card"><div class="prod-num">0</div><div class="prod-title">Barreira de cadastro</div><div class="prod-desc">Fornecedor só precisa ter WhatsApp — não precisa se cadastrar em nenhum portal para responder cotação</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INVESTIMENTO -->
+<section class="section">
+  <div class="sec-badge">Investimento</div>
+  <h2 class="sec-title">Planos para <em>2 ou 3 assistentes</em></h2>
+  <p class="sec-desc">A mensalidade escala com a operação: quanto mais assistentes contratados de início, menor o custo marginal de cada um — evita pagar mais depois para expandir. Escolha o número de assistentes e o regime de fidelidade que fizer mais sentido para a Contractor hoje.</p>
+
+  <div class="metrics-grid" style="margin-bottom:36px">
+    <div class="mc"><div class="mc-val">R$ 3.500</div><div class="mc-lbl">1 assistente/mês (referência)</div></div>
+    <div class="mc"><div class="mc-val">R$ 4.200</div><div class="mc-lbl">2 assistentes/mês (+R$700 o 2º)</div></div>
+    <div class="mc"><div class="mc-val">R$ 5.000</div><div class="mc-lbl">3 assistentes/mês (+R$800 o 3º)</div></div>
+    <div class="mc"><div class="mc-val">R$ 1.500</div><div class="mc-lbl">Custo de adicionar 1 assistente depois</div></div>
+  </div>
+
+  <div class="plans-grid">
+    <div class="pc semestral">
+      <div class="ptag">Sem Fidelidade</div>
+      <div class="pname">2 Assistentes · Contractor</div>
+      <div class="pprice">R$ 4.200</div>
+      <div class="pperiod">por mês · sem prazo mínimo, cancele quando quiser</div>
+      <ul class="pitems">
+        <li>2 Assistentes de IA dgenny®</li>
+        <li>Integração nativa com Sienge (API pública)</li>
+        <li>Cotação 100% automatizada via WhatsApp, 24x7</li>
+        <li>Busca ilimitada de fornecedores, sem limite geográfico</li>
+        <li>Gestor de contas dedicado + suporte contínuo</li>
+        <li>Pouca abertura para desconto neste regime</li>
+      </ul>
+      <div class="ptotal">Implantação (pagamento único): <strong>R$ 5.000</strong></div>
+    </div>
+
+    <div class="pc anual">
+      <div class="ptag">Com Fidelidade · 6+ meses</div>
+      <div class="pname">2 Assistentes · Contractor</div>
+      <div class="pprice">A definir</div>
+      <div class="pperiod">a partir de 6 meses de permanência · maior flexibilidade de investimento</div>
+      <ul class="pitems">
+        <li>2 Assistentes de IA dgenny®</li>
+        <li>Integração nativa com Sienge (API pública)</li>
+        <li>Cotação 100% automatizada via WhatsApp, 24x7</li>
+        <li>Busca ilimitada de fornecedores, sem limite geográfico</li>
+        <li>Gestor de contas dedicado + suporte contínuo</li>
+        <li>Condição especial sobre os R$ 4.200/mês, a fechar com a diretoria</li>
+      </ul>
+      <div class="ptotal">Implantação (pagamento único): <strong>R$ 5.000</strong></div>
+    </div>
+
+    <div class="pc semestral">
+      <div class="ptag">Sem Fidelidade</div>
+      <div class="pname">3 Assistentes · Contractor</div>
+      <div class="pprice">R$ 5.000</div>
+      <div class="pperiod">por mês · sem prazo mínimo, cancele quando quiser</div>
+      <ul class="pitems">
+        <li>3 Assistentes de IA dgenny® — 1 por comprador</li>
+        <li>Integração nativa com Sienge (API pública)</li>
+        <li>Cotação 100% automatizada via WhatsApp, 24x7</li>
+        <li>Busca ilimitada de fornecedores, sem limite geográfico</li>
+        <li>Gestor de contas dedicado + suporte contínuo</li>
+        <li>Pouca abertura para desconto neste regime</li>
+      </ul>
+      <div class="ptotal">Implantação (pagamento único): <strong>R$ 5.000</strong></div>
+    </div>
+
+    <div class="pc anual">
+      <div class="ptag">Com Fidelidade · 6+ meses</div>
+      <div class="pname">3 Assistentes · Contractor</div>
+      <div class="pprice">A definir</div>
+      <div class="pperiod">a partir de 6 meses de permanência · maior flexibilidade de investimento</div>
+      <ul class="pitems">
+        <li>3 Assistentes de IA dgenny® — 1 por comprador</li>
+        <li>Integração nativa com Sienge (API pública)</li>
+        <li>Cotação 100% automatizada via WhatsApp, 24x7</li>
+        <li>Busca ilimitada de fornecedores, sem limite geográfico</li>
+        <li>Gestor de contas dedicado + suporte contínuo</li>
+        <li>Condição especial sobre os R$ 5.000/mês, a fechar com a diretoria</li>
+      </ul>
+      <div class="ptotal">Implantação (pagamento único): <strong>R$ 5.000</strong></div>
+    </div>
+  </div>
+  <p class="pvalid" style="margin-top:28px">⏳ Proposta elaborada em 23/07/26 · Válida até 07/08/26 · Valores dos planos com fidelidade a fechar em conversa direta com a diretoria</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- REFLEXÃO -->
+<section class="section">
+  <div class="sec-badge">Reflexão</div>
+  <h2 class="sec-title">Onde a Contractor estará<br><em>daqui a 12 meses?</em></h2>
+  <p class="sec-desc">A Contractor já sente o custo do processo manual: uma emergência de prazo (sinalizador viário) virou corrida no Google sob pressão do Ministério do Trabalho, e uma equipe de apenas 3 compradores sustenta obras simultâneas em pelo menos 5 municípios do ES, além de licitações com preço fechado meses antes do início da obra. Sem acelerar a cotação, cada nova urgência tende a repetir esse cenário.</p>
+  <div class="challenges">
+    <div class="ci"><div class="ci-title">Quantas vezes mais a Contractor vai correr contra o prazo?</div><div class="ci-desc">O caso do sinalizador viário se resolveu por lembrar, na última hora, de um fornecedor esquecido. Em 12 meses de operação manual, quantas urgências desse tipo vão aparecer — e quantas não terão essa sorte?</div></div>
+    <div class="ci"><div class="ci-title">O time de 3 compradores vai crescer ou vai escalar?</div><div class="ci-desc">Contratar mais gente custa muito mais que R$ 5.000/mês. Com dgenny®, os mesmos 3 compradores sustentam mais obras e mais cotações, sem aumentar a folha.</div></div>
+    <div class="ci"><div class="ci-title">Quanto tempo mais os preços de licitação vão ficar defasados?</div><div class="ci-desc">Preços fechados meses antes da obra começar perdem margem a cada reajuste. Cotar mais rápido significa entrar na obra com preço atualizado, não com o que sobrou do orçamento inicial.</div></div>
+    <div class="ci"><div class="ci-title">Quantos fornecedores próximos às obras a Contractor ainda não descobriu?</div><div class="ci-desc">Sem busca automatizada por proximidade (Guriri, São Mateus, Domingos Martins, Viana), a Contractor continua girando nos mesmos fornecedores de sempre — e paga frete e prazo mais altos por isso.</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="section">
+  <div class="sec-badge">Próximos Passos</div>
+  <h2 class="sec-title">Da aprovação ao<br><em>primeiro resultado</em></h2>
+  <p class="sec-desc" style="margin-bottom:60px">Implantação estruturada para zero impacto na operação atual durante a transição.</p>
+  <div class="timeline">
+    <div class="ts"><div class="ts-dot">1</div><div class="ts-title">Aprovação</div><div class="ts-desc">Aprovação do Thiago e definição da data de início</div></div>
+    <div class="ts"><div class="ts-dot">2</div><div class="ts-title">Contrato & Kick-off</div><div class="ts-desc">Assinatura do contrato sem fidelidade e alinhamento com o time de compras</div></div>
+    <div class="ts"><div class="ts-dot">3</div><div class="ts-title">Implantação</div><div class="ts-desc">Conexão via API pública do Sienge + treinamento de 3 a 4h com os 3 compradores</div></div>
+    <div class="ts"><div class="ts-dot">4</div><div class="ts-title">Go-live</div><div class="ts-desc">Primeira cotação real disparada pelos 3 assistentes, com o Sienge já integrado</div></div>
+    <div class="ts"><div class="ts-dot">5</div><div class="ts-title">Acompanhamento</div><div class="ts-desc">Gestor de contas dedicado acompanha o uso diário e tira dúvidas da equipe</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Pronta para tirar a Contractor do WhatsApp manual?</h2>
+  <p>3 assistentes de IA, sem fidelidade, prontos para começar a cotar assim que o Sienge for integrado.</p>
+  <a href="https://www.dgenny.com.br/registro-cliente" target="_blank" class="cta-btn">Quero Começar Agora →</a>
+</section>
+
+<div class="footer">
+  <div class="footer-logo">
+    <svg style="opacity:.6" width="120" viewBox="0 0 752 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M262.485 68.3907C255.412 60.7099 246.08 56.8236 234.697 56.8236C221.49 56.8236 210.989 60.8016 203.503 68.6543C196.029 76.4841 192.246 86.8475 192.246 99.4462C192.246 112.045 196.041 122.454 203.526 129.997C211.012 137.541 221.089 141.37 233.481 141.37H235.786C246.906 141.049 255.985 137.013 262.829 129.367V139.627H277.319V25H262.473V68.3907H262.485ZM235.912 128.782C227.429 128.782 220.527 126.065 215.38 120.7C210.221 115.324 207.608 108.17 207.608 99.4348C207.608 90.1261 210.221 82.709 215.38 77.3898C220.527 72.082 227.429 69.388 235.912 69.388C244.395 69.388 251.021 72.1164 255.698 77.5044C260.433 82.9497 262.829 90.2064 262.829 99.0794C262.829 107.952 260.421 114.796 255.687 120.414C250.941 126.042 244.475 128.771 235.912 128.771V128.782Z" fill="white"/>
+      <path d="M358.437 68.6656C351.341 60.8014 341.895 56.812 330.305 56.812C317.099 56.812 306.598 60.79 299.112 68.6427C291.637 76.4725 287.854 86.8358 287.854 99.4346C287.854 112.033 291.649 122.443 299.135 129.986C306.621 137.529 316.697 141.358 329.09 141.358H331.394C342.227 141.037 351.181 137.082 358.093 129.596V154.541C358.093 156.742 357.612 157.384 357.463 157.533C357.279 157.717 356.626 158.164 354.643 158.164H320.366V171.439H354.643C361.2 171.439 365.763 170.247 368.606 167.793C371.506 165.283 372.927 160.95 372.927 154.553V58.5545H358.437V68.6656ZM331.52 128.782C323.037 128.782 316.136 126.065 310.988 120.7C305.83 115.323 303.216 108.17 303.216 99.4346C303.216 90.1259 305.83 82.7088 310.988 77.3896C316.136 72.0819 323.037 69.3879 331.52 69.3879C340.003 69.3879 346.629 72.1162 351.307 77.5043C356.041 82.9496 358.437 90.2062 358.437 99.0792C358.437 107.952 356.03 114.796 351.295 120.413C346.549 126.042 340.084 128.771 331.52 128.771V128.782Z" fill="white"/>
+      <path d="M457.106 72.506C454.137 67.8517 449.838 64.0228 444.313 61.1453C438.799 58.2679 432.264 56.812 424.882 56.812C412.008 56.812 401.782 60.79 394.457 68.6542C387.166 76.484 383.474 86.7785 383.474 99.2626C383.474 111.747 387.234 122.443 394.663 129.986C402.091 137.54 412.26 141.358 424.882 141.358C431.164 141.358 436.838 140.383 441.745 138.48C446.651 136.566 450.434 134.365 452.991 131.923C455.513 129.516 457.68 126.719 459.422 123.589C461.211 120.391 462.185 118.293 462.517 116.986C462.815 115.793 463.022 114.831 463.148 114.097L463.434 112.435H448.004L447.19 115.152C446.881 116.069 446.216 117.295 445.184 118.797C444.141 120.333 442.822 121.904 441.275 123.463C439.807 124.93 437.641 126.191 434.844 127.223C432.001 128.266 428.722 128.782 425.076 128.782C416.719 128.782 410.277 126.443 405.943 121.835C401.851 117.49 399.443 111.724 398.79 104.674H464.214L464.375 103.435C464.615 101.636 464.73 99.8817 464.73 98.208C464.73 94.6312 464.191 90.573 463.125 86.1365C462.047 81.6656 460.03 77.0686 457.118 72.4946L457.106 72.506ZM449.529 91.9258H398.824C399.627 85.976 402.114 80.7715 406.264 76.4267C410.712 71.7609 417.04 69.3879 425.054 69.3879C433.067 69.3879 438.913 71.715 443.132 76.312C447.293 80.8517 449.449 86.1021 449.54 91.9258H449.529Z" fill="white"/>
+      <path d="M515.446 56.812H514.724C508.338 56.9381 502.595 58.6233 497.631 61.8217C494.353 63.9425 491.659 66.476 489.572 69.3879V58.5545H475.254V139.627H490.099V98.3914C490.099 88.5095 492.358 81.2185 496.817 76.7018C501.265 72.1965 507.364 69.9152 514.93 69.9152C522.496 69.9152 527.701 71.8526 530.876 75.6586C534.121 79.5448 535.76 86.148 535.76 95.2617V139.627H550.778V95.2617C550.778 82.4452 547.912 72.7353 542.248 66.4072C536.54 60.0334 527.529 56.812 515.457 56.812H515.446Z" fill="white"/>
+      <path d="M604.451 56.812H603.729C597.344 56.9381 591.6 58.6233 586.648 61.8217C583.369 63.9425 580.675 66.476 578.589 69.3879V58.5545H564.27V139.627H579.105V98.3914C579.105 88.5095 581.363 81.2185 585.822 76.7018C590.27 72.1965 596.369 69.9152 603.935 69.9152C611.501 69.9152 616.706 71.8526 619.882 75.6586C623.126 79.5448 624.765 86.148 624.765 95.2617V139.783H639.783V95.2617C639.783 82.4452 636.917 72.7353 631.254 66.4072C625.545 60.0334 616.534 56.812 604.463 56.812H604.451Z" fill="white"/>
+      <path d="M707.454 58.5547L682.543 119.428L659.146 59.4603L658.79 58.5547H642.821L675.401 136.99L668.546 153.567C667.606 155.436 667.044 156.525 666.849 156.88C666.849 156.88 666.666 157.167 665.76 157.648C665.302 157.889 664.407 158.175 662.688 158.175H639.772V171.451H662.688C666.047 171.451 668.867 171.141 671.068 170.534C673.441 169.869 675.504 168.447 677.19 166.303C678.76 164.309 679.826 162.761 680.457 161.569C681.053 160.434 682.085 158.221 683.644 154.759L723.572 58.5662H707.454V58.5547Z" fill="white"/>
+      <path d="M721.887 128.392C721.887 126.306 720.603 125.24 718.058 125.24H714.114V135.27H715.479V131.476H719.193C720.087 131.476 720.19 131.946 720.19 132.301V135.27H721.554V132.301C721.554 131.591 721.234 131.098 720.592 130.845C721.463 130.318 721.898 129.493 721.898 128.392H721.887ZM720.523 128.392C720.523 129.665 719.72 130.284 718.058 130.284H715.479V126.432H718.058C719.72 126.432 720.523 127.074 720.523 128.392Z" fill="white"/>
+      <path d="M724.26 123.749C722.449 121.915 720.213 120.987 717.611 120.987C715.009 120.987 712.762 121.915 710.928 123.749C709.093 125.584 708.165 127.819 708.165 130.421C708.165 133.024 709.093 135.213 710.928 137.036C712.762 138.87 715.009 139.799 717.611 139.799C720.213 139.799 722.449 138.87 724.26 137.036C726.071 135.202 727 132.978 727 130.421C727 127.865 726.083 125.584 724.26 123.749ZM725.624 130.433C725.624 132.645 724.833 134.571 723.286 136.142C721.738 137.712 719.823 138.503 717.611 138.503C715.398 138.503 713.473 137.701 711.925 136.107C710.377 134.56 709.586 132.645 709.586 130.433C709.586 128.22 710.377 126.283 711.925 124.69C713.473 123.108 715.387 122.294 717.611 122.294C719.835 122.294 721.738 123.085 723.286 124.655C724.833 126.226 725.624 128.163 725.624 130.421V130.433Z" fill="white"/>
+      <path d="M152.81 80.9664L107.173 93.1984C102.003 94.5855 97.291 97.3024 93.5079 101.085C89.7248 104.869 87.0079 109.58 85.6208 114.75L73.3889 160.388L89.1631 164.618L101.063 120.207L135.729 154.874L147.285 143.318L112.618 108.652L157.029 96.7521L152.799 80.9779L152.81 80.9664Z" fill="#FFBEF5"/>
+      <path d="M108.652 36.051L96.4198 81.6885C95.0326 86.8587 92.3157 91.5704 88.5326 95.3534C84.7496 99.1365 80.0379 101.853 74.8677 103.241L29.2302 115.472L25 99.6982L69.4109 87.7988L34.7557 53.1206L46.3113 41.5651L80.978 76.2317L92.866 31.8208L108.64 36.051H108.652Z" fill="#FFBEF5"/>
+    </svg>
+  </div>
+  <div class="footer-text">Negocie. Compre. Escale. · dgenny.com.br · Diagnóstico confidencial elaborado em 23/07/26</div>
+</div>
+
+</body>
+</html>
